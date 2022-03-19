@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: instaclonewebd
-        image: docker.io/haungi/insta-clone-web:1.0.1 # {"$imagepolicy": "flux-system:insta-clone-web"}
+        image: docker.io/haungi/insta-clone-web:1.0.2 # {"$imagepolicy": "flux-system:insta-clone-web"}
         imagePullPolicy: IfNotPresent
         ports:
         - name: http
