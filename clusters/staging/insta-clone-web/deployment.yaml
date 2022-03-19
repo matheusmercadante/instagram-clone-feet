@@ -13,8 +13,8 @@ spec:
         app: insta-clone-web
     spec:
       containers:
-        - name: podinfod
-          image: docker.io/haungi/insta-clone-web:1.0.0
+        - name: instaclonewebd
+          image: docker.io/haungi/insta-clone-web:1.0.0 # {"$imagepolicy": "flux-system:insta-clone-web"}
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
