@@ -4,10 +4,6 @@ metadata:
   name: flux-system
   namespace: flux-system
 spec:
-  interval: 1m0s
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
   git:
     checkout:
       ref:
@@ -19,6 +15,10 @@ spec:
       messageTemplate: '{{range .Updated.Images}}{{println .}}{{end}}'
     push:
       branch: main
+  interval: 1m0s
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
   update:
     path: ./clusters/staging
     strategy: Setters
