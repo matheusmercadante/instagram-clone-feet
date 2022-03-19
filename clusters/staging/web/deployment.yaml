@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: insta-clone-web
+  namespace: client
+spec:
+  selector:
+    matchLabels:
+      app: insta-clone-web
+  template:
+    metadata:
+      labels:
+        app: insta-clone-web
+    spec:
+      containers:
+        - name: webd
+          image: docker.io/haungi/insta-clone-web:1.0.0
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 3000
+              protocol: TCP
