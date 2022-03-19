@@ -13,10 +13,10 @@ spec:
         app: insta-clone-web
     spec:
       containers:
-        - name: instaclonewebd
-          image: docker.io/haungi/insta-clone-web:1.0.0 # {"$imagepolicy": "flux-system:insta-clone-web"}
-          imagePullPolicy: IfNotPresent
-          ports:
-            - name: http
-              containerPort: 80
-              protocol: TCP
+      - name: instaclonewebd
+        image: docker.io/haungi/insta-clone-web:1.0.1 # {"$imagepolicy": "flux-system:insta-clone-web"}
+        imagePullPolicy: IfNotPresent
+        ports:
+        - name: http
+          containerPort: 80
+          protocol: TCP
